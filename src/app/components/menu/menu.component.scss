@@ -1,0 +1,26 @@
+.active-btn{
+    background-color: #27ae60 !important;
+    transition: all .4s ease-in-out;
+    i{
+        color: #FFFFFF !important;
+    }
+}
+
+.control{
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #454e56;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .7rem 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,.3);
+    i{
+        font-size: 1.2rem;
+        color:#b2becd;
+        pointer-events: none;
+    }
+}
