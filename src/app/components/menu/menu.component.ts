@@ -7,20 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  sectBtn = document.querySelectorAll('.control');
+  activeButton:string = 'home';
   
   constructor() { }
 
   ngOnInit(): void {}
 
-  //Button click active class
-  SetActiveClass(){
-    for(let i=0; i<this.sectBtn.length;i++){
-      this.sectBtn[i].addEventListener('click', function(){
-          let currentBtn = document.querySelectorAll('.active-btn');
-          currentBtn[0].className=currentBtn[0].className.replace('active-btn','');
-      })
-    }
-
+  checkActiveClass(button: string){
+    return this.activeButton == button ? true : false;
   }
+
+  changeActiveButton(newButton: string){
+    this.activeButton = newButton;
+  }
+
 }
