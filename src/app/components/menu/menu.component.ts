@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  sectBtn = document.querySelectorAll('.control');
+  
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  //Button click active class
+  SetActiveClass(){
+    for(let i=0; i<this.sectBtn.length;i++){
+      this.sectBtn[i].addEventListener('click', function(){
+          let currentBtn = document.querySelectorAll('.active-btn');
+          currentBtn[0].className=currentBtn[0].className.replace('active-btn','');
+      })
+    }
+
+  }
 }
