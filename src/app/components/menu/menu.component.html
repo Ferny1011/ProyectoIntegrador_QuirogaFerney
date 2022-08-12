@@ -1,14 +1,14 @@
 <div class="controls">
-    <div class="control control-1 active-btn" data-id="home" [class.active-btn]="checkActiveClass('home')" (click)="changeActiveButton('home')">
+    <div class="control control-1 active-btn" [class.active-btn]="checkActiveClass('home')" (click)="changeActiveButton('home')">
         <i class="fa-solid fa-house"></i>
     </div>
-    <div [class.active-btn]="checkActiveClass('about')" class="control control-2" data-id="about" (click)="changeActiveButton('about')">
+    <div class="control control-2" [class.active-btn]="checkActiveClass('about')" (click)="changeActiveButton('about')">
         <i class="fa-solid fa-user"></i>
     </div>
-    <div class="control control-3" data-id="proyects" [class.active-btn]="checkActiveClass('proyects')" (click)="changeActiveButton('proyects')">
+    <div class="control control-3" [class.active-btn]="checkActiveClass('proyects')" (click)="changeActiveButton('proyects')">
         <i class="fa-solid fa-briefcase"></i>
     </div>
-    <div class="control control-4" data-id="contact" [class.active-btn]="checkActiveClass('contact')" (click)="changeActiveButton('contact')">
+    <div class="control control-4" [class.active-btn]="checkActiveClass('contact')" (click)="changeActiveButton('contact')">
         <i class="fa-solid fa-envelope"></i>
     </div>
 </div>

@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainContentComponent implements OnInit {
 
+  activeSection: string ='home';
+  activeButton:string = 'home';
+  
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  checkActiveSection(button: string){
+    return this.activeSection == button ? true : false;
   }
+
+  changeActiveSection(newSection: string){
+    this.activeSection = newSection;
+  }
+
 
 }

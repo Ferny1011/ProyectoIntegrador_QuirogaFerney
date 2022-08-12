@@ -1,6 +1,11 @@
 <body class="main-content">
-    <header class="section sec1 header active" id="home">
+    <header class="section sec1 header " [class.activeSection]="checkActiveSection('home')" (click)="changeActiveSection('home')">
         <app-header></app-header>
         <app-banner></app-banner>
     </header>
+    <main>
+        <section class="section sec2 about active" [class.activeSection]="checkActiveSection('about')" (click)="changeActiveSection('about')">
+            <app-about></app-about>
+        </section>
+    </main>
 </body>

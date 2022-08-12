@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
+import { HeaderComponent } from './components/header/header.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
   //   component: contact
   // }
   {
-    path:'**',
+    path:'**', pathMatch:'full',
     redirectTo: ''
   }
 ];
