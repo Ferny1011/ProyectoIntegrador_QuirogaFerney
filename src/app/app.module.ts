@@ -13,6 +13,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EducationComponent } from './components/education/education.component';
     MenuComponent,
     SkillsComponent,
     ExperienceComponent,
-    EducationComponent
+    EducationComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
