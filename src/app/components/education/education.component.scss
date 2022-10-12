@@ -13,7 +13,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            color: #2a2e35;
+            color: #191d2b;
             transition: all .4s ease-in-out;
             z-index: -1;
             transform: translate(-50%, -50%);
@@ -23,24 +23,17 @@
     }
 }
 
+.timeline-container {
+	padding: 50px;
+	width: 70%;
+	margin: 0 auto;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	list-style: none;
-}
-
-
-
-a,
-a:hover {
-	text-decoration: none;
-}
-
-.timeline-container {
-	padding: 50px;
-	width: 70%;
-	margin: 0 auto;
 }
 
 .timeline,
@@ -55,17 +48,28 @@ a:hover {
   
 }
 
+.timeline li {
+	margin: 100px 0;
+}
+
 .timeline li > .timeline-content {
 	width: calc(50% - 100px);
 }
 
-.timeline li {
-	margin: 100px 0;
+.timeline:after,
+.timeline li:first-child:before,
+.timeline li:last-child:before,
+.timeline-photo {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .timeline li:first-child{
 	margin-top: 0;
 }
+
 .timeline li:last-child {
 	padding-top: 115px;
 	margin-bottom: 0;
@@ -80,23 +84,12 @@ a:hover {
 	float: right;
 }
 
-.timeline:after,
-.timeline li:first-child:before,
-.timeline li:last-child:before,
-.timeline-photo {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
-
-
 .timeline li:first-child:before,
 .timeline li:last-child:before,
 .timeline:after {
 	content: '';
 	width: 6px;
-	background-color: #2a2e35;
+	background-color:  #27ae60;
 	top: 0;
 	bottom: 0;
 	transform: translate(-50%, 0);
@@ -110,6 +103,7 @@ a:hover {
 	bottom: 50%;
 	z-index: 2;
 }
+
 
 .timeline-photo {
 	top: 50%;
@@ -128,18 +122,25 @@ a:hover {
 	border-radius: 50%;
 }
 
-.timeline-content h2 {
+.timeline-content {
+	h2 {
 	margin-bottom: 15px;
 	text-transform: uppercase;
 	font-size: 16px;
-}
+	color: #27ae60;
+	}
+	p{
+		box-shadow: 0px 10px 1000px #27ae60;
+		border-radius: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+		
+	}
 
-.timeline-content h2 a {
-	color: #444;
 }
 
 .timeline li:last-child .timeline-photo {
-	background-color: #11c9e6;
+	background-color: #27ae60;
 	display: table;
 }
 
@@ -162,7 +163,7 @@ a:hover {
 }
 
 .timeline li:last-child .timeline-photo:hover {
-	background-color: #088fa5;
+	background-color: #27ae60;
 }
 
 /* RESPONSIVE */

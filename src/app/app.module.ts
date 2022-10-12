@@ -9,11 +9,12 @@ import { SocialComponent } from './components/social/social.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { AboutComponent } from './components/about/about.component';
-import { MenuComponent } from './components/menu/menu.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { LoginComponent } from './components/login/login.component';
+import { BackgroundAnimationComponent } from './components/background-animation/background-animation.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,12 @@ import { ProjectsComponent } from './components/projects/projects.component';
     BannerComponent,
     MainContentComponent,
     AboutComponent,
-    MenuComponent,
     SkillsComponent,
     ExperienceComponent,
     EducationComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    LoginComponent,
+    BackgroundAnimationComponent
   ],
   imports: [
     BrowserModule,
@@ -36,5 +38,6 @@ import { ProjectsComponent } from './components/projects/projects.component';
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

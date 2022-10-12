@@ -1,3 +1,4 @@
+
 .main-title{
     text-align: center;
     h2{
@@ -13,7 +14,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            color: #2a2e35;
+            color: #191d2b;
             transition: all .4s ease-in-out;
             z-index: -1;
             transform: translate(-50%, -50%);
@@ -42,7 +43,7 @@
                 cursor: default;
                 transform: translateY(-5px);
                 border: 1px solid #27ae60;
-                box-shadow: 1px 4px 15px rgba(0,0,0,.32);
+                box-shadow: 1px 4px 15px #27ae60;;
             }
             .abt-text{
                 padding: 1rem;
@@ -57,6 +58,7 @@
                     font-size: 2.7rem;
                     font-weight: 700;
                     color: #27ae60;
+                    
                 }
                 .small-text{
                     padding-left: 3rem;
@@ -106,11 +108,20 @@
     
     .left-about{
         padding-right: 5rem;
+        span{
+            color: #27ae60;
+        }
         p{
             font-family: 'Martel', serif;
             line-height: 2rem;
             padding: 1rem;
             color: #dbe1e8;
+            span{
+                font-family: 'Kaushan Script', cursive;
+                letter-spacing: 2px;
+                font-weight: 600;
+                
+            }
         }
         h4{
             font-size: 2rem;

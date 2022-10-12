@@ -1,28 +1,49 @@
 <body class="main-content">
-    <header class="section sec1 header">
+    <header class="section sec1 header active" id="home">
         <app-header></app-header>
         <app-banner></app-banner>
     </header>
     <main>
-        <section class="section sec2 about">
+        <section class="section sec2 about" id="about">
             <app-about></app-about>
-        </section>
-
-        <section class="section sec3 skills">
             <app-skills></app-skills>
         </section>
-
-        <section class="section sec4 experience">
-            
+        
+        <section class="section sec3 education" id="knowledge">
+            <app-education></app-education>             
         </section>
-
-        <section class="section sec5 education">
+        
+        <section class="section sec4 experience" id="experience">
             <app-experience></app-experience>
-            <app-education></app-education>
         </section>
-
-        <section class="section sec6 projects active">
+        
+        <section class="section sec5 projects" id="projects">
             <app-projects></app-projects>
         </section>
+
+        <section class="section sec6 login" id="login">
+            <app-login></app-login>
+        </section>
     </main>
+    <div class="menu">
+        <div class="controls">
+            <div [routerLink]="['/']" routerLinkActive="active" class="control control-1 active-btn" #homeSection [class.active-btn]="checkActiveClass('home')" (click)="changeActiveButton('home')" (click)="toHome()">
+                <i class="fa-solid fa-house"></i>
+            </div>
+            <div routerLinkActive="active" class="control control-2" #aboutSection [class.active-btn]="checkActiveClass('about')" (click)="changeActiveButton('about')" (click)="toAbout()">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div routerLinkActive="active"class="control control-3" #knowledgeSection [class.active-btn]="checkActiveClass('knowledge')" (click)="changeActiveButton('knowledge')" (click)="toKnowledge()">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div routerLinkActive="active"class="control control-4" #projectsSection [class.active-btn]="checkActiveClass('projects')" (click)="changeActiveButton('projects')" (click)="toProjects()">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div routerLinkActive="active"class="control control-5" #loginSection [class.active-btn]="checkActiveClass('login')" (click)="changeActiveButton('login')" (click)="toLogin()">
+                <i class="fa-solid fa-user-pen"></i>
+            </div>
+        </div>
+    </div>
+    
 </body>

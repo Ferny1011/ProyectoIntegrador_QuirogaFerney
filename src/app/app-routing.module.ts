@@ -4,6 +4,9 @@ import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { EducationComponent } from './components/education/education.component';
 const routes: Routes = [
   {
     path: '',
@@ -21,10 +24,19 @@ const routes: Routes = [
      path: 'skills',
      component: SkillsComponent
   },
-  // {
-  //   path: 'contact',
-  //   component: contact
-  // }
+  {
+    path: 'experience',
+    component: ExperienceComponent
+  },
+  {
+    path: 'education',
+    component: EducationComponent
+  },
+  {
+    path: 'projects',
+    component: ProjectsComponent
+  },
+
   {
     path:'**', pathMatch:'full',
     redirectTo: ''
