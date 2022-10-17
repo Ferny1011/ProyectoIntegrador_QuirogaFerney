@@ -1,6 +1,7 @@
 $link-color: #27ae60;
 .main-title{
   text-align: center;
+  padding-bottom: 3.5rem;
   h2{
       position: relative;
       text-transform: uppercase;
@@ -22,6 +23,14 @@ $link-color: #27ae60;
           font-size: 6.3rem;
       }
   }
+  @media(max-width: 860px) {
+    h2{
+      .bg-text{
+        font-size: 4.5rem;
+      }
+    }
+  }
+
 }
 
 .timeline {
