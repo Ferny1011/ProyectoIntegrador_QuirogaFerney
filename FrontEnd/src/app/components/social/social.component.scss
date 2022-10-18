@@ -13,7 +13,10 @@ div {
       border-radius: 10px;
       position: relative;
       transition: 0.4s;
-    }   
+    }
+    .fa-user-pen{
+        cursor: pointer;
+    }
       
     //here is the hover effect
     
@@ -74,7 +77,7 @@ div {
         color: #c32aa3;
     }
                 
-    .link:hover i.reddit {
+    .link:hover i.fa-user-pen {
         color: #FF4500;
     }
                 

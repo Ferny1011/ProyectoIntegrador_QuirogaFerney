@@ -1,4 +1,23 @@
+section{
+    min-height: 100vh;
+    width: 100%;
+    padding: 3rem;
+}
+
+body{
+    
+    background-color: #191d2b;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    background-image: linear-gradient(0deg,#000000 30%, #27ae60 100%);
+}
+
+
 .login-container{
+    position: absolute;
+    right: 0;
+    top: 15%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -43,7 +62,7 @@
 }
 
 .left-login-image{
-    width: 90%;
+    width: 70%;
 }
 
 .right-login{
@@ -134,8 +153,14 @@
 
     .right-login{
         width: 100%;
-        padding-top: 50%;
-        
-        
+        padding-top:0%;
+    }
+
+    .card-login{
+       backdrop-filter: none;
+    }
+
+    .textfield label{
+       display: none;
     }
 }

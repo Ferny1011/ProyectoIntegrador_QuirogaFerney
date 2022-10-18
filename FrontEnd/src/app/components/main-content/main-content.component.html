@@ -21,11 +21,10 @@
         <section class="section sec5 projects" id="projects">
             <app-projects></app-projects>
         </section>
-
-        <section class="section sec6 login" id="login">
-            <app-login></app-login>
-        </section>
     </main>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
     <div class="menu">
         <div class="controls">
             <div [routerLink]="['/']" routerLinkActive="active" class="control control-1 active-btn" #homeSection [class.active-btn]="checkActiveClass('home')" (click)="changeActiveButton('home')" (click)="toHome()">
@@ -40,9 +39,6 @@
 
             <div routerLinkActive="active"class="control control-4" #projectsSection [class.active-btn]="checkActiveClass('projects')" (click)="changeActiveButton('projects')" (click)="toProjects()">
                 <i class="fa-solid fa-briefcase"></i>
-            </div>
-            <div routerLinkActive="active"class="control control-5" #loginSection [class.active-btn]="checkActiveClass('login')" (click)="changeActiveButton('login')" (click)="toLogin()">
-                <i class="fa-solid fa-user-pen"></i>
             </div>
         </div>
     </div>

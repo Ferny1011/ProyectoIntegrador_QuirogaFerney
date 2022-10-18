@@ -40,14 +40,4 @@ export class MainContentComponent implements OnInit {
     document.getElementById('projects')?.scrollIntoView({behavior:"smooth"});
   }
 
-  toLogin(){
-    document.getElementById('login')?.scrollIntoView({behavior:"smooth"});
-  }
-
-  //intersect section with menu
-  @ViewChild('homeSection') homeSection!: ElementRef;
-  @ViewChild('aboutSection') aboutSection!: ElementRef;
-  @ViewChild('knowledgeSection') knowledgeSection!: ElementRef;
-  @ViewChild('projectsSection') projectsSection!: ElementRef;
-  @ViewChild('loginSection') loginSection!: ElementRef;
 }

@@ -15,6 +15,7 @@ import { EducationComponent } from './components/education/education.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { LoginComponent } from './components/login/login.component';
 import { BackgroundAnimationComponent } from './components/background-animation/background-animation.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BackgroundAnimationComponent } from './components/background-animation/
     EducationComponent,
     ProjectsComponent,
     LoginComponent,
-    BackgroundAnimationComponent
+    BackgroundAnimationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
