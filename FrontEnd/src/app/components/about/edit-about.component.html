@@ -1,0 +1,28 @@
+<body>
+    <div class="container" *ngIf="abouts">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <input id="input-1" type="text" placeholder="Ingrese el titulo" name="titulo" [(ngModel)]="abouts.titulo"
+                required autofocus />
+            <label for="input-1">
+                <span class="label-text">Titulo</span>
+                <span class="nav-dot"></span>
+                <div class="signup-button-trigger">Editar about</div>
+            </label>
+            <input id="input-2" type="text" placeholder="Ingrese el subtitulo" name="subtitulo"
+                [(ngModel)]="abouts.subtitulo" required />
+            <label for="input-2">
+                <span class="label-text">Subtitulo</span>
+                <span class="nav-dot"></span>
+            </label>
+            <input id="input-3" type="file" name="imagen" [(ngModel)]="abouts.img" 
+                accept=".jpg,.jpeg,.png" required />
+            <label for="input-3">
+                <span class="label-text">Imagen</span>
+                <span class="nav-dot"></span>
+            </label>
+            <button type="submit">Actualizar</button>
+            <p class="tip">Presione Tab</p>
+            <div class="signup-button">Editar about</div>
+        </form>
+    </div>
+</body>

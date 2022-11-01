@@ -14,9 +14,9 @@
         </section>
 
         <!--I don't have any work experience, but I finished the section so I can add a job in a future-->
-        <!--<section class="section sec4 experience" id="experience">
+        <section class="section sec4 experience" id="experience">
             <app-experience></app-experience>
-        </section> -->
+        </section> 
         
         <section class="section sec5 projects" id="projects">
             <app-projects></app-projects>
@@ -27,17 +27,17 @@
     </footer>
     <div class="menu">
         <div class="controls">
-            <div [routerLink]="['/']" routerLinkActive="active" class="control control-1 active-btn" #homeSection [class.active-btn]="checkActiveClass('home')" (click)="changeActiveButton('home')" (click)="toHome()">
+            <div class="control control-1 active-btn" [class.active-btn]="checkActiveClass('home')" (click)="changeActiveButton('home')" (click)="toHome()">
                 <i class="fa-solid fa-house"></i>
             </div>
-            <div routerLinkActive="active" class="control control-2" #aboutSection [class.active-btn]="checkActiveClass('about')" (click)="changeActiveButton('about')" (click)="toAbout()">
+            <div class="control control-2" [class.active-btn]="checkActiveClass('about')" (click)="changeActiveButton('about')" (click)="toAbout()">
                 <i class="fa-solid fa-user"></i>
             </div>
-            <div routerLinkActive="active"class="control control-3" #knowledgeSection [class.active-btn]="checkActiveClass('knowledge')" (click)="changeActiveButton('knowledge')" (click)="toKnowledge()">
+            <div class="control control-3" [class.active-btn]="checkActiveClass('knowledge')" (click)="changeActiveButton('knowledge')" (click)="toKnowledge()">
                 <i class="fa-solid fa-graduation-cap"></i>
             </div>
 
-            <div routerLinkActive="active"class="control control-4" #projectsSection [class.active-btn]="checkActiveClass('projects')" (click)="changeActiveButton('projects')" (click)="toProjects()">
+            <div class="control control-4" [class.active-btn]="checkActiveClass('projects')" (click)="changeActiveButton('projects')" (click)="toProjects()">
                 <i class="fa-solid fa-briefcase"></i>
             </div>
         </div>

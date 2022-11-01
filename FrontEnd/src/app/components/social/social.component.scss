@@ -14,9 +14,10 @@ div {
       position: relative;
       transition: 0.4s;
     }
-    .fa-user-pen{
+    .fa-user-pen, .fa-right-from-bracket{
         cursor: pointer;
     }
+
       
     //here is the hover effect
     
@@ -55,8 +56,9 @@ div {
     }
                 
     .link:nth-child(4)::before {
-        background: #000000;
+        background: #27ae60;
     }
+
                 
     .link:hover::before {
         transform: translate(-4px, -4px);
@@ -78,7 +80,7 @@ div {
     }
                 
     .link:hover i.fa-user-pen {
-        color: #FF4500;
+        color: gray;
     }
                 
     .link:hover i.github {
@@ -88,8 +90,34 @@ div {
     .link:hover i.linkedin {
         color: #0a66ca;
     }
+
+    .link:hover i.fa-right-from-bracket{
+        color: gray;
+    }
 }
 
+@media screen and (max-width: 600px){
+   div{
+    .link{
+        width: 30px;
+        height: 40px;
+    }
+    .link i{
+        font-size: 1.3em;
+    }
+    div{
+        position: absolute;
+        top :0;
+    }
+    position: absolute;
+    top: 40px;
+    right: 0;
+
+
+    
+   }
+
+}
 
               
 

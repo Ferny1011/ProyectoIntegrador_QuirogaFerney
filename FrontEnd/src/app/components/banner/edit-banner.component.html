@@ -1,0 +1,39 @@
+<body>
+    <div class="container" *ngIf="persona">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <input id="input-1" type="text" placeholder="Nombre de la persona" name="nombre" [(ngModel)]="persona.nombre" required autofocus />
+            <label for="input-1">
+                <span class="label-text">Nombre</span>
+                <span class="nav-dot"></span>
+                <div class="signup-button-trigger">Editar Banner</div>
+            </label>
+            <input id="input-2" type="text" placeholder="Apellido de la persona" name="apellido" [(ngModel)]="persona.apellido"
+                required />
+            <label for="input-2">
+                <span class="label-text">Apellido</span>
+                <span class="nav-dot"></span>
+            </label>
+            <input id="input-3" type="file"  name="imagen"
+                [(ngModel)]="persona.img" accept = ".jpg,.jpeg,.png" required />
+            <label for="input-3">
+                <span class="label-text">Imagen</span>
+                <span class="nav-dot"></span>
+            </label>
+            <input id="input-4" type="text" placeholder="Url del Curriculum" name="cv"
+                [(ngModel)]="persona.cv" required />
+            <label for="input-4">
+                <span class="label-text">URl curriculum</span>
+                <span class="nav-dot"></span>
+            </label>
+            <input id="input-5" type="text" placeholder="descripcion" name="descripcion"
+                [(ngModel)]="persona.descripcion" (change)="uploadImage($event)" />
+            <label for="input-5">
+                <span class="label-text">Descripcion</span>
+                <span class="nav-dot"></span>
+            </label>
+            <button type="submit">Actualizar</button>
+            <p class="tip">Presione Tab</p>
+            <div class="signup-button">Editar Banner</div>
+        </form>
+    </div>
+</body>

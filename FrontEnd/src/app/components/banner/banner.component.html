@@ -4,21 +4,26 @@
     <div class="left-banner">
         <div class="banner-shape"></div>
         <div class="image">
-            <img src="../../../assets/Ferney2.png" alt="Ferney Photo">
+            <img src={{persona.img}} alt="{{persona.nombre}} Photo">
         </div>
     </div>
     <!--right-->
     <div class="right-banner">
         <app-background-animation></app-background-animation>
+        <div class="admin-button" *ngIf="isLogged">
+            <button type="button" class="admin edit" routerLink="/editbanner/1">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+        </div>
         <h1 class="name">
-                Hola, soy <span>Ferney Santiago Quiroga.</span>
+                Hola, soy <span>{{persona.nombre}} {{persona.apellido}}</span>
                 Desarrollador Web Full-Stacks Jr.
         </h1>
         <p>
-            Busco una experiencia desafiante dentro de una empresa del campo del desarrollo de software y/o electrónica que me permita ampliar mi conocimiento actual y crecer como profesional en una de mis más grandes pasiones, la tecnología.          
+            {{persona.descripcion}}          
         </p>
         <div class="btn-content">
-            <a href="https://1drv.ms/b/s!AokKnm8h1gLihHQCNNdSBZKkivzs?e=RzQj3X" class="main-btn">
+            <a href="{{persona.cv}}" class="main-btn">
                 <span class="btn-text">Curriculum Vitae</span>
                 <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
             </a>

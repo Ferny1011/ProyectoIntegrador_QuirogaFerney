@@ -3,265 +3,53 @@
 </div>
 <div class="description" data-aos="fade-left" data-aos-duration="3000">
     <p>
-        Tengo una amplia gama de habilidades aplicables que me permitiran ser un miembro valioso de su equipo. <br>Estas incluyen <span>habilidades técnicas</span> específicas que he desarrollado durante el último año<br> junto con fuertes <span>habilidades blandas</span> desarrolladas a lo largo de mi carrera.
+        Tengo una amplia gama de habilidades aplicables que me permitiran ser un miembro valioso de su equipo. <br>Estas
+        incluyen <span>habilidades técnicas</span> específicas que he desarrollado durante el último año<br> junto con
+        fuertes <span>habilidades blandas</span> desarrolladas a lo largo de mi carrera.
     </p>
 </div>
 <div class="wrapper">
     <h2 class="soft-title"><span>Soft </span> Skills</h2>
     <div class="container soft">
-        <div class="soft-skills" data-aos="fade-up" data-aos-duration="3000">
-            <div class="percent" style="--clr:#27ae60;--num:95">
+        <div class="soft-skills" data-aos="fade-up" data-aos-duration="3000" *ngFor="let skill of skill">
+            <div class="percent" style="--clr:#27ae60;--num:{{skill.porcentaje}}">
                 <div class="dot"></div>
                 <svg>
                     <circle cx="70" cy="70" r="70"></circle>
                     <circle cx="70" cy="70" r="70"></circle>
                 </svg>
                 <div class="number">
-                    <h2>95<span>%</span></h2>
-                    <p>Liderazgo</p>
+                    <h2>{{skill.porcentaje}}<span>%</span></h2>
+                    <p>{{skill.nombre}}</p>
                 </div>
             </div>
-        </div>
-        <div class="soft-skills" data-aos="fade-down" data-aos-duration="3000">
-            <div class="percent" style="--clr:#27ae60;--num:90">
-                <div class="dot"></div>
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="number">
-                    <h2>90<span>%</span></h2>
-                    <p>Trabajo en equipo</p>
-                </div>
-            </div>
-        </div>
-        <div class="soft-skills" data-aos="fade-up" data-aos-duration="3000">
-            <div class="percent" style="--clr:#27ae60;--num:80">
-                <div class="dot"></div>
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="number">
-                    <h2>80<span>%</span></h2>
-                    <p>Adabtabilidad</p>
-                </div>
-            </div>
-        </div>
-        <div class="soft-skills" data-aos="fade-down" data-aos-duration="3000">
-            <div class="percent" style="--clr:#27ae60;--num:88">
-                <div class="dot"></div>
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="number">
-                    <h2>88<span>%</span></h2>
-                    <p>Manejo del tiempo</p>
-                </div>
-            </div>
-        </div>
-        <div class="soft-skills" data-aos="fade-up" data-aos-duration="3000">
-            <div class="percent" style="--clr:#27ae60;--num:95">
-                <div class="dot"></div>
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="number">
-                    <h2>95<span>%</span></h2>
-                    <p>Compromiso</p>
-                </div>
-            </div>
-        </div>
-        <div class="soft-skills" data-aos="fade-down" data-aos-duration="3000">
-            <div class="percent" style="--clr:#27ae60;--num:87">
-                <div class="dot"></div>
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="number">
-                    <h2>87<span>%</span></h2>
-                    <p>Asertividad</p>
-                </div>
-            </div>
-        </div>
-        <div class="soft-skills different" data-aos="fade-up" data-aos-duration="3000">
-            <div class="percent" style="--clr:#27ae60;--num:75">
-                <div class="dot"></div>
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="number">
-                    <h2>75<span>%</span></h2>
-                    <p>Creatividad</p>
-                </div>
-            </div>
-        </div>
-    </div>    
-</div>
-<div class="wrapper">
-    <div class="container hard">
-        <h2 class="hard-title"><span>Hard </span> Skills</h2>
-        <div class="hard-skills right">
-            <div class="left-details">
-                <div class="details">
-                    <span>HTML5</span>
-                    <span>90%</span>
-                </div>
-                <div class="bar">
-                    <div id="html-bar"></div>
-                </div>
-            </div>
-            <div class="img">
-                <i class="fa-brands fa-html5" id="fill-img"></i>
-            </div>
-        </div>
 
-        <div class="hard-skills left">
-            <div class="img">
-                <i class="fa-brands fa-css3-alt" id="fill-img"></i>
+            <div class="admin-button" *ngIf="isLogged">
+                <button type="button" class="admin edit" routerLink="/editskills/{{skill.id}}">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button type="button" class="admin erase" (click)="delete(skill.id)">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
             </div>
-            <div class="right-details">
-                <div class="details">
-                    <span>80%</span>
-                    <span>CSS</span>
-                </div>
-                <div class="bar">
-                    <div id="css-bar"></div>
-                </div>
-            </div>
-           
-            
-        </div>
 
-        <div class="hard-skills right">
-            <div class="left-details">
-                <div class="details">
-                    <span>JavaScript</span>
-                    <span>88%</span>
-                </div>
-                <div class="bar">
-                    <div id="javascript-bar"></div>
-                </div>
-            </div>
-            <div class="img">
-                <i class="fa-brands fa-js-square" id="fill-img"></i>
-            </div>
-        </div>
-
-
-        <div class="hard-skills left">
-            <div class="img">
-                <i class="fa-brands fa-angular" id="fill-img"></i>
-            </div>
-            <div class="right-details">
-                <div class="details">
-                    <span>75%</span>
-                    <span>Angular</span>
-                    
-                </div>
-                <div class="bar">
-                    <div id="angular-bar"></div>
-                </div>
-            </div>
-        </div>
-   
-        <div class="hard-skills right">
-            <div class="left-details">
-                <div class="details">
-                    <span>Java</span>
-                    <span>60%</span>
-                </div>
-                <div class="bar">
-                    <div id="java-bar"></div>
-                </div>
-            </div>
-            <div class="img">
-                <i class="fa-brands fa-java " id="fill-img"></i>
-            </div>
-        </div>
-
-        
-        <div class="hard-skills left">
-            <div class="img">
-                <i class="fa-brands fa-python" id="fill-img"></i>
-            </div>
-            <div class="right-details">
-                <div class="details">
-                    <span>95%</span>
-                    <span>Python</span>
-                </div>
-                <div class="bar">
-                    <div id="python-bar"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="hard-skills right">
-            <div class="left-details">
-                <div class="details">
-                    <span>MySQL</span>
-                    <span>80%</span>
-                </div>
-                <div class="bar">
-                    <div id="mysql-bar"></div>
-                </div>
-            </div>
-            <div class="img">
-                <i class="fa-solid fa-database" id="fill-img"></i>
-            </div>
-        </div>
-
-        <div class="hard-skills left">
-            <div class="img">
-                <i class="fa-solid fa-gem" id="fill-img"></i>
-            </div>
-            <div class="right-details">
-                <div class="details">
-                    <span>70%</span>
-                    <span>Ruby</span>
-                </div>
-                <div class="bar">
-                    <div id="ruby-bar"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="hard-skills right">
-            <div class="left-details">
-                <div class="details">
-                    <span>C/C++</span>
-                    <span>90%</span>
-                </div>
-                <div class="bar">
-                    <div id="c-bar"></div>
-                </div>
-            </div>
-            <div class="img">
-                <i class="fa-brands fa-c" id="fill-img"></i>
-            </div>
-        </div>
-
-        <div class="hard-skills left">
-            <div class="img english">
-                <i class="fa-solid fa-language" id="fill-img"></i>
-            </div>
-            <div class="right-details">
-                <div class="details">
-                    <span>95%</span>
-                    <span>Ingles</span>
-                </div>
-                <div class="bar">
-                    <div id="ingles-bar"></div>
-                </div>
-            </div>
         </div>
     </div>
-    
+    <div class="add-new">
+        <button type="button" class="new" routerLink="/newskill" *ngIf="isLogged">
+            <span class="text">Nueva soft</span>
+        </button>
+    </div>
 </div>
+
+
+
+<div class="wrapper">
+    <app-hard-skills></app-hard-skills>
+</div>
+
+
+
 
 
 

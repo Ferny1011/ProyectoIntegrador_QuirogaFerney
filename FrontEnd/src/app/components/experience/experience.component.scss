@@ -339,3 +339,102 @@ p{
 label{
   cursor: pointer;
 }
+
+
+.add-new{
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  text-align: center;
+}
+
+.admin-button-r{
+  text-align: right;
+}
+
+.admin-button-l{
+  text-align: left;
+}
+
+.admin{
+  background: #2a2e35;
+  color: white;
+  border: 1px solid #2a2e35;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  &:hover{
+    background: white;
+    color: #2a2e35;
+  }
+}
+
+
+.new{
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.new::after,
+.new::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.new::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #27ae60;
+  border-radius: 10px;
+}
+
+.new::after {
+  content: '+';
+  color: #191d2b;
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.new:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.new:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.new:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}

@@ -1,5 +1,4 @@
 <!--tittle-->
-
 <div class="main-title" data-aos="zoom-out" data-aos-duration="3000">
     <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
 </div>
@@ -13,32 +12,26 @@
             Me destaco por mi <span>liderazgo</span> y trabajo en equipo. Esto, además de mi alta capacidad de retención de información y una buena<span> velocidad de aprendizaje</span>, me permite poder enfrentarme de manera acertada a los diferentes entornos o situaciones en los que se me requiera.<br>
         </p>
     </div>
+    
     <!--right part-->
     <div class="right-about">
-        <div class="about item1" data-aos="zoom-in-right">
-            <div class="abt-text">
-                <p class="large-text">Electrónica</p>
-                <p class="small-text">Robotica<br /> Telecomunicacion</p>
+        <div class="about item" data-aos="zoom-in-right"  *ngFor="let about of abouts" style="background: linear-gradient(to bottom, rgb(0 0 0 / 1),rgb(0 0 0 /.25)),url({{about.img}})">
+            <div class="admin-button" *ngIf="isLogged">
+                <button type="button" class="admin edit" routerLink="/editabout/{{about.id}}">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button type="button" class="admin erase" (click)="delete(about.id)">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
             </div>
-        </div>
-        <div class="about item2" data-aos="zoom-in-right">
             <div class="abt-text">
-                <p class="large-text">Artes graficas</p>
-                <p class="small-text">Diseño <br /> Musica</p>
-
+                <p class="large-text">{{about.titulo}}</p>
+                <p class="small-text">{{about.subtitulo}}
             </div>
-        </div>
-        <div class="about item3" data-aos="zoom-in-right">
-            <div class="abt-text">
-                <p class="large-text">Soft skills</p>
-                <p class="small-text">Lider <br /> Trabajo en equipo</p>
-            </div>
-        </div>
-        <div class="about item4" data-aos="zoom-in-right"> 
-            <div class="abt-text">
-                <p class="large-text">Programacion</p>
-                <p class="small-text">Front-end <br /> Back-end</p>
-            </div>
-        </div>
     </div>
+</div>
+<div class="add-new">
+	<button type="button" class="new" routerLink="/newabout" *ngIf="isLogged">
+		<span class="text">Nuevo destacado</span>
+	</button>
 </div>

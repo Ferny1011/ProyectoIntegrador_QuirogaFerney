@@ -1,31 +1,32 @@
 <div class="main-title">
-    <h2>My<span>jobs</span><span class="bg-text">Experience</span></h2>
+  <h2>My<span>jobs</span><span class="bg-text">Experience</span></h2>
 </div>
 
 <ul class="timeline">
-    <li>
-      <div class="direction-r">
-        <input class= "radio" id="work1" type="radio">
-        <div class="flag-wrapper">
-          <label for="work1"><span class="flag">Lorem, ipsum</span></label>
-          <span class="time-wrapper"><span class="time">2010 - 2016</span></span>
+  <li *ngFor="let experience of expe">
+    <div [ngClass]="changeDirection()">
+      <input class="radio" id="{{experience.nombreE}}" ng type="radio">
+      <div class="flag-wrapper">
+        <div [ngClass]="'admin-button-'+changeEdit()" *ngIf="isLogged">
+          <button type="button" class="admin edit" routerLink="/editexp/{{experience.id}}">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button type="button" class="admin erase" (click)="delete(experience.id)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
         </div>
-        <div class="desc">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, corrupti illo! Architecto quaerat, ex laboriosam expedita aspernatur ad ratione dolorem neque. Harum dolores repudiandae inventore <a href="#" target="_top">Lorem ipsum dolor sit amet</a></p>
-        </div>
+        <label for="{{experience.nombreE}}"><span class="flag">{{experience.nombreE}}</span></label>
+        <span class="time-wrapper"><span class="time">{{experience.fechaE}}</span></span>
       </div>
-    </li>
-  
-    <li>
-      <div class="direction-l">
-        <input class= "radio" id="work2" type="radio">
-        <div class="flag-wrapper">
-          <label for="work2"><span class="flag">Lorem ipsum dolor</span></label>
-          <span class="time-wrapper"><span class="time">2013 - 2016</span></span>
-        </div>
-        <div class="desc">
-          <p>Lorem<strong>impus dolor sit</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus expedita rerum, possimus aperiam veritatis recusandae beatae repellat saepe aspernatur temporibus illum obcaecati! Cumque consequuntur qui officia quaerat veritatis esse sequi!</p>
-        </div>
+      <div class="desc">
+        <p>{{experience.descripcionE}}</p>
       </div>
-    </li>
-  </ul>
+    </div>
+  </li>
+</ul>
+
+<div class="add-new">
+  <button type="button" class="new" routerLink="/nuevaexp" *ngIf="isLogged">
+    <span class="text">Nueva experiencia</span>
+  </button>
+</div>

@@ -1,0 +1,263 @@
+.hard {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid #2a2e35;
+    animation: green-shadow 3s forwards;
+
+    @keyframes green-shadow {
+        100% {
+            box-shadow: 0 20px 30px #27ae60;
+        }
+    }
+}
+
+
+.hard-title {
+    grid-column: 1/-1;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 5000;
+    font-size: 3.5rem;
+
+    span {
+        font-size: 3.5rem;
+        font-family: 'Kaushan Script', cursive;
+        color: #27ae60;
+    }
+
+}
+
+.hard-skills {
+    display: grid;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 15px;
+    margin-left: 5%;
+
+    .img {
+        width: fit-content;
+
+        i {
+            font-size: 5rem;
+            color: rgba(255, 255, 255, 0.06);
+        }
+    }
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Martel', serif;
+    font-size: 1.5rem;
+
+    span {
+        font-weight: 300;
+        color: #fff;
+        font-size: 0.5em;
+
+    }
+}
+
+.bar {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 7px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all .4s ease-in-out;
+
+    &:hover {
+        cursor: default;
+        transform: translateY(-2px);
+        box-shadow: 1px 4px 15px rgba(0, 0, 0, .32);
+    }
+}
+
+.bar div {
+    
+    width: 0;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #b8f8da;
+    border: 1px solid #27ae60;
+    box-shadow: 0 0 5px rgba(28, 252, 103, 0.6);
+}
+
+#fill-img {
+    animation: fill-img 5.5s forwards;
+}
+
+@keyframes fill-img {
+    100% {
+        color: #27ae60;
+    }
+}
+
+.right {
+    grid-template-columns: 80% 5%;
+    justify-content: space-between;
+
+
+    .img {
+        justify-self: end;
+    }
+}
+
+.left {
+    grid-template-columns: 5% 80%;
+    justify-content: space-between;
+
+    .english {
+        i {
+            font-size: 4rem;
+        }
+    }
+
+    .bar {
+        height: 19px;
+
+    }
+
+    .bar div {
+        position: absolute;
+        right: 10px;
+    }
+}
+
+#bar {
+    animation: bar-fill 2.5s forwards;
+}
+
+@keyframes bar-fill {
+    100% {
+        width: var(--num);
+    }
+}
+.wrapper{
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+   
+ }
+
+.add-new{
+    position: relative;
+    top: 0%;
+    left: 8%;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .admin-button-r{
+    text-align: right;
+  }
+  
+  .admin-button-l{
+    text-align: left;
+  }
+  
+  .admin{
+    background: #2a2e35;
+    color: white;
+    border: 1px solid #2a2e35;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    &:hover{
+      background: white;
+      color: #2a2e35;
+    }
+  }
+  
+  
+  .new{
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .new::after,
+  .new::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+  }
+  
+  .new::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #27ae60;
+    border-radius: 10px;
+  }
+  
+  .new::after {
+    content: '+';
+    color: #191d2b;
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+  
+  .new:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+  
+  .new:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .new:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+  }
+
+
+
+@media screen and (max-width: 768px) {
+    .hard-skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .details {
+        width: 100%;
+        height: 100%;
+        font-size: 1.5em;
+        font-size: 1.2em;
+    }
+}

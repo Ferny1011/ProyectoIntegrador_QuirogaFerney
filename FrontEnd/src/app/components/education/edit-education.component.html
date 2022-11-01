@@ -1,0 +1,40 @@
+<body>
+    <div class="container" *ngIf="education">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <input id="input-1" type="text" placeholder="Titulo adquirido" name="tituloE"
+                [(ngModel)]="education.tituloE" required autofocus />
+            <label for="input-1">
+                <span class="label-text">Titulo</span>
+                <span class="nav-dot"></span>
+                <div class="signup-button-trigger">Editar titulo</div>
+            </label>
+            <input id="input-2" type="text" placeholder="Fecha" name="fechaE" [(ngModel)]="education.fechaE" required />
+            <label for="input-2">
+                <span class="label-text">Fecha de finalizacion</span>
+                <span class="nav-dot"></span>
+            </label>
+            <input id="input-3" type="text" placeholder="Descripcion" name="descripcionE"
+                [(ngModel)]="education.descripcionE" required />
+            <label for="input-3">
+                <span class="label-text">Descripcion</span>
+                <span class="nav-dot"></span>
+            </label>
+            <input id="input-4" type="file" name="imgE" [(ngModel)]="education.imgE" 
+                accept=".jpg,.jpeg,.png" required />
+            <label for="input-4">
+                <span class="label-text">Imagen</span>
+                <span class="nav-dot"></span>
+            </label>
+            <input id="input-5" type="text" placeholder="Url del certificado" name="urlE"
+                [(ngModel)]="education.urlE" />
+            <label for="input-5">
+                <span class="label-text">Url</span>
+                <span class="nav-dot"></span>
+            </label>
+            <button type="submit">Actualizar</button>
+            <p class="tip">Presione Tab</p>
+            <div class="signup-button">Editar titulo</div>
+        </form>
+    </div>
+
+</body>

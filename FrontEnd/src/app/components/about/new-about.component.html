@@ -1,0 +1,23 @@
+<body>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <input id="input-1" type="text" placeholder="Titulo" name="titulo" [(ngModel)]="titulo" required autofocus />
+        <label for="input-1">
+            <span class="label-text">Titulo</span>
+            <span class="nav-dot"></span>
+            <div class="signup-button-trigger">Nuevo destacado</div>
+        </label>
+        <input id="input-2" type="text" placeholder="Subtitulo" name="subtitulo" [(ngModel)]="subtitulo" required />
+        <label for="input-2">
+            <span class="label-text">Subtitulo</span>
+            <span class="nav-dot"></span>
+        </label>
+        <input id="input-3" type="file" name="img" [(ngModel)]="img" required />
+        <label for="inpu-3">
+            <span class="label-text">Imagen</span>
+            <span class="nav-dot"></span>
+        </label>
+        <button type="submit">Agregar</button>
+        <p class="tip">Presione Tab</p>
+        <div class="signup-button">Nuevo destacado</div>
+    </form>
+</body>

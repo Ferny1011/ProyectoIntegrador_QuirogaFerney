@@ -1,10 +1,3 @@
-a {
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  font-family: inherit;
-}
-
 /*banner-content*/
 .banner-content {
   margin-top: 22px;
@@ -12,7 +5,7 @@ a {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  height: 90%;
+  height: 100%;
 }
 
 .banner-content .left-banner {
@@ -29,7 +22,7 @@ a {
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   width: 65%;
-  height: 102%;
+  height: 100%;
   background-color: #27ae60;
   position: absolute;
   left: 0;
@@ -51,6 +44,7 @@ a {
 
 .banner-content .left-banner .image img {
   margin-left: 4rem;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -103,12 +97,19 @@ a {
       align-self: flex-start;
 }
 
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
 .main-btn {
   border-radius: 30px;
   color: inherit;
   font-weight: 600;
   position: relative;
-  border: 1px solid #27ae60;
+  border: 1px solid #191d2b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,7 +128,7 @@ a {
 }
 
 .main-btn .btn-icon {
-  background-color: #27ae60;
+  background-color: #191d2b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,10 +162,63 @@ a {
 .main-btn:hover::before {
   width: 100%;
   height: 100%;
-  background-color: #27ae60;
+  background-color: #191d2b;
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-transition: all .4s ease-out;
   transition: all .4s ease-out;
+}
+
+.admin {
+  background: #2a2e35;
+  color: white;
+  border: 1px solid #2a2e35;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.admin:hover {
+  background: white;
+  color: #2a2e35;
+}
+
+/*responsive*/
+@media screen and (max-width: 600px) {
+  .banner-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-bottom: 2rem;
+  }
+  .left-banner .banner-shape {
+    display: none;
+  }
+  .right-banner {
+    padding-right: 0 !important;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .right-banner .name {
+    font-size: 2.5rem !important;
+  }
+  .banner-content .left-banner .image {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .btn-content {
+    margin: 0 auto;
+  }
+  .main-btn {
+    border: 1px solid #27ae60;
+  }
+  .main-btn .btn-icon {
+    background-color: #27ae60;
+  }
+  .main-btn:hover::before {
+    background-color: #27ae60;
+  }
 }
 /*# sourceMappingURL=banner.component.css.map */

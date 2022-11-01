@@ -1,0 +1,232 @@
+section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem;
+}
+
+body {
+  background-color: #191d2b;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #000000), to(#27ae60));
+  background-image: linear-gradient(0deg, #000000 30%, #27ae60 100%);
+}
+
+.login-container {
+  height: 80%;
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left-login {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.left-login .main-title {
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.left-login .main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.left-login .main-title h2 span {
+  color: #27ae60;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.left-login .main-title h2 .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #191d2b;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 6.3rem;
+}
+
+.left-login h1 {
+  color: #27ae60;
+}
+
+.left-login-image {
+  width: 69%;
+}
+
+.right-login {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-login {
+  width: 60%;
+}
+
+form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 35px;
+  -webkit-backdrop-filter: blur(250px);
+          backdrop-filter: blur(250px);
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.textfield {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0px;
+}
+
+.textfield input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #191d2b;
+  color: #f0ffffde;
+  font-size: 12pt;
+  -webkit-box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.textfield label {
+  color: #f0ffffde;
+  margin-bottom: 10px;
+}
+
+.textfield input::-webkit-input-placeholder {
+  color: #27ae60;
+}
+
+.textfield input:-ms-input-placeholder {
+  color: #27ae60;
+}
+
+.textfield input::-ms-input-placeholder {
+  color: #27ae60;
+}
+
+.textfield input::placeholder {
+  color: #27ae60;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #27ae60;
+  background: #00000000;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 40px -12px #00ff8052;
+          box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .left-login {
+    width: 100%;
+    padding: 0;
+  }
+  .left-login h2 {
+    color: #27ae60;
+  }
+  .left-login img {
+    position: absolute;
+    z-index: -2;
+    -webkit-filter: blur(1.5px);
+            filter: blur(1.5px);
+  }
+  .right-login {
+    width: 100%;
+    padding-top: 0%;
+  }
+  .card-login {
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  .textfield label {
+    display: none;
+  }
+}
+/*# sourceMappingURL=login.component.css.map */

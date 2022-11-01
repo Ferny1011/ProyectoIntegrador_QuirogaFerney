@@ -4,7 +4,7 @@ div {
   display: flex;
 }
 
-.link {
+div .link {
   text-decoration: none;
   color: #27ae60;
   margin: 10px;
@@ -26,12 +26,16 @@ div {
   transition: 0.4s;
 }
 
-.link:hover {
+div .fa-user-pen, div .fa-right-from-bracket {
+  cursor: pointer;
+}
+
+div .link:hover {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.link::before {
+div .link::before {
   content: " ";
   position: absolute;
   width: 100%;
@@ -43,58 +47,62 @@ div {
   transition: opasity 0.2s;
 }
 
-.link:hover::before {
+div .link:hover::before {
   opacity: 0.4;
 }
 
-.link:nth-child(1)::before {
+div .link:nth-child(1)::before {
   background: #c32aa3;
 }
 
-.link:nth-child(2)::before {
-  background: #1da1f2;
-}
-
-.link:nth-child(3)::before {
+div .link:nth-child(2)::before {
   background: #6e5494;
 }
 
-.link:nth-child(4)::before {
+div .link:nth-child(3)::before {
   background: #0a66c2;
 }
 
-.link:hover::before {
+div .link:nth-child(4)::before {
+  background: #27ae60;
+}
+
+div .link:hover::before {
   -webkit-transform: translate(-4px, -4px);
           transform: translate(-4px, -4px);
   -webkit-filter: blur(10px);
           filter: blur(10px);
 }
 
-.link i {
+div .link i {
   font-size: 1.7em;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-.link:hover i {
+div .link:hover i {
   color: #c8c8c8;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-.link:hover i.instagram {
+div .link:hover i.instagram {
   color: #c32aa3;
 }
 
-.link:hover i.twitter {
-  color: #1da1f2;
+div .link:hover i.fa-user-pen {
+  color: gray;
 }
 
-.link:hover i.whatsapp {
-  color: #25d366;
+div .link:hover i.github {
+  color: #000000;
 }
 
-.link:hover i.linkedin {
+div .link:hover i.linkedin {
   color: #0a66ca;
+}
+
+div .link:hover i.fa-right-from-bracket {
+  color: gray;
 }
 /*# sourceMappingURL=social.component.css.map */

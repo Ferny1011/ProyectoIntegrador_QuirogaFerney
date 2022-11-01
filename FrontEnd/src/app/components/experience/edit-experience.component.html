@@ -1,0 +1,28 @@
+<body>
+    <div class="container" *ngIf="expLab">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <input id="input-1" type="text" placeholder="Nombre de la empresa" name="nombreE" [(ngModel)]="expLab.nombreE" required autofocus />
+            <label for="input-1">
+                <span class="label-text">Empresa</span>
+                <span class="nav-dot"></span>
+                <div class="signup-button-trigger">Editar experiencia</div>
+            </label>
+            <input id="input-2" type="text" placeholder="Tiempo transcurido" name="fechaE" [(ngModel)]="expLab.fechaE"
+                required />
+            <label for="input-2">
+                <span class="label-text">Fecha</span>
+                <span class="nav-dot"></span>
+            </label>
+            <input id="input-3" type="text" placeholder="Descripcion de la tarea" name="descripcionE"
+                [(ngModel)]="expLab.descripcionE" required />
+            <label for="inpu-3">
+                <span class="label-text">Descripcion</span>
+                <span class="nav-dot"></span>
+            </label>
+            <button type="submit">Actualizar</button>
+            <p class="tip">Presione Tab</p>
+            <div class="signup-button">Editar experiencia</div>
+        </form>
+    </div>
+
+</body>

@@ -1,20 +1,37 @@
 <!--tittle-->
 <div class="main-title" data-aos="fade-right" data-aos-duration="3000">
-    <h2><span>my</span> projects<span class="bg-text">portfolio</span></h2>
+  <h2><span>my</span> projects<span class="bg-text">portfolio</span></h2>
 </div>
 <!--a little description-->
 <div class="description" data-aos="fade-right" data-aos-duration="3000">
-  <p>Estos son algunos de los projectos que he desarrollado aplicando los conocimientos adquiridos a lo largo de mi trayectoria.</p>
+  <p>Estos son algunos de los projectos que he desarrollado aplicando los conocimientos adquiridos a lo largo de mi
+    trayectoria.</p>
 </div>
 
 <div class="project-section">
-    <div class="card-grid" data-aos="flip-up">
-        <a class="card" href="/home">
-          <div class="card__background" style="background-image: url(../../../assets/Portfolio.png)"></div>
-          <div class="card__content">
-            <p class="card__category">Front/back-End</p>
-            <h3 class="card__heading">Mi Portfolio Web</h3>
-          </div>
-        </a>
+  <div class="card-grid" data-aos="flip-up" *ngFor="let projecto of projectos">
+    <div class="admin-button" *ngIf="isLogged">
+      <button type="button" class="admin edit" routerLink="/editproject/{{projecto.id}}">
+        <i class="fa-solid fa-pen"></i>
+      </button>
+      <button type="button" class="admin erase" (click)="delete(projecto.id)">
+        <i class="fa-solid fa-trash"></i>
+      </button>
     </div>
+    <a class="card" href="{{projecto.url}}">
+      <div class="card__background" style="background-image: url({{projecto.img}})"></div>
+      <div class="card__content">
+        <p class="card__category">{{projecto.categoria}}</p>
+        <p class="card__category">{{projecto.fecha}}</p>
+        <h3 class="card__heading">{{projecto.nombre}}</h3>
+      </div>
+    </a>
+    
+
+  </div>
+</div>
+<div class="add-new">
+  <button type="button" class="new" routerLink="/newproject" *ngIf="isLogged">
+    <span class="text">Nuevo projecto</span>
+  </button>
 </div>

@@ -9,7 +9,10 @@
     <a href="https://www.linkedin.com/in/ferney-santiago-quiroga-rojas-a9a633152" class="link">
       <i class="fa-brands fa-linkedin linkedin"></i>
     </a>
-    <div class="link">
+    <a href="/login" class="link" *ngIf="!isLogged">
         <i class="fa-solid fa-user-pen"></i>
+    </a>
+    <div class="link" (click)="onLogOut()" *ngIf="isLogged">
+      <i class="fa-solid fa-right-from-bracket"></i> 
     </div>
 </div>

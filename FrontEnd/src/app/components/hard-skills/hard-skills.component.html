@@ -1,0 +1,37 @@
+<div class="container hard">
+    <h2 class="hard-title"><span>Hard </span> Skills</h2>
+    <div class="wrapper" *ngFor=" let skill of hard">
+        <div class="hard-skills right" >
+            
+            <div class="left-details">
+                <div class="admin-button" *ngIf="isLogged">
+                    <button type="button" class="admin edit" routerLink="/edithard/{{skill.id}}">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button type="button" class="admin erase" (click)="delete(skill.id)">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                
+                <div class="details">
+                    <span>{{skill.nombre}}</span>
+                    <span>{{skill.porcentaje}} %</span>
+                </div>
+                <div class="bar">
+                    <div id="bar" style="--num:{{skill.porcentaje}}%"></div>
+                </div>
+            </div>
+            <div class="img">
+                <i class="fa-solid fa-hand-fist" id="fill-img"></i>
+            </div>
+                      
+        </div>
+    </div>
+    
+
+</div>
+<div class="add-new">
+    <button type="button" class="new" routerLink="/newhard" *ngIf="isLogged">
+        <span class="text">Nueva hard</span>
+    </button>
+</div>

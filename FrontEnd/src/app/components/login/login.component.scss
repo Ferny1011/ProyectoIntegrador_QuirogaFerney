@@ -15,6 +15,7 @@ body{
 
 
 .login-container{
+    height: 80%;
     position: absolute;
     right: 0;
     top: 15%;
@@ -62,7 +63,7 @@ body{
 }
 
 .left-login-image{
-    width: 70%;
+    width: 69%;
 }
 
 .right-login{
@@ -74,6 +75,10 @@ body{
 
 .card-login{
     width: 60%;
+}
+
+form{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

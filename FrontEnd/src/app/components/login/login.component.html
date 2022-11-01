@@ -11,16 +11,18 @@
             <!--the right part will include the form-->
             <div class="right-login" data-aos="fade-left">
                 <div class="card-login">
-                    <div class="textfield">
-                        <label for="user">Usuario</label>
-                        <input type="text" name="usuario" placeholder="Ingrese el usuario">
-                    </div>
-                    <div class="textfield">
-                        <label for="password">Contraseña</label>
-                        <input type="password" name="password" placeholder="Ingrese la contraseña">
-                    </div>
-                    <button class="btn-login">Login</button>
-                </div>    
+                    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+                        <div class="textfield">
+                            <label for="nombreUsuario">Usuario</label>
+                            <input type="user" id ="nombreUsuario" [(ngModel)]="nombreUsuario" placeholder="Ingrese el usuario" name="nombreUsuario" required>
+                        </div>
+                        <div class="textfield">
+                            <label for="password">Contraseña</label>
+                            <input type="password" id="password" [(ngModel)]="password" placeholder="Ingrese la contraseña" name="password" required>
+                        </div>
+                        <button class="btn-login">Login</button>
+                    </form>
+                </div>
             </div>
         
             </div>
