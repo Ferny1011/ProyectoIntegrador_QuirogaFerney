@@ -1,20 +1,23 @@
 <body>
     <div class="container" *ngIf="hard">
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-            <input id="input-1" type="text" placeholder="Nombre de la skill" name="skill" [(ngModel)]="hard.nombre" required autofocus />
+            <input id="input-1" type="text" placeholder="Nombre de la skill" name="skill" [(ngModel)]="hard.nombre"
+                required autofocus />
             <label for="input-1">
                 <span class="label-text">skill</span>
                 <span class="nav-dot"></span>
                 <div class="signup-button-trigger">Editar skill</div>
             </label>
-            <input id="input-2" type="text" placeholder="porcentaje de la skill" name="porcentaje" [(ngModel)]="hard.porcentaje" required />
+            <input id="input-2" type="text" placeholder="porcentaje de la skill" name="porcentaje"
+                [(ngModel)]="hard.porcentaje" required />
             <label for="input-2">
                 <span class="label-text">porcentaje</span>
                 <span class="nav-dot"></span>
             </label>
-            <input id="input-3" type="text" placeholder="url de la imagen" name="urlimg" [(ngModel)]="hard.urlimg" required />
+            <input id="input-3" type="text" placeholder="Font Awseonme Icon" name="urlimg" [(ngModel)]="hard.urlimg"
+                required />
             <label for="inpu-3">
-                <span class="label-text">Imagen</span>
+                <span class="label-text">Clase del icono</span>
                 <span class="nav-dot"></span>
             </label>
             <button type="submit">Actualizar</button>
@@ -22,5 +25,4 @@
             <div class="signup-button">Editar skill</div>
         </form>
     </div>
-
 </body>

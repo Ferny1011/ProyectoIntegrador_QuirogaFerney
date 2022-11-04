@@ -9,35 +9,35 @@ import { elementAt, ObjectUnsubscribedError } from 'rxjs';
 
 export class MainContentComponent implements OnInit {
 
-  activeButton:string = 'home';
+  activeButton: string = 'home';
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
-  checkActiveClass(button: string){
+  checkActiveClass(button: string) {
     return this.activeButton == button ? true : false;
   }
 
-  changeActiveButton(newButton: string){
+  changeActiveButton(newButton: string) {
 
     this.activeButton = newButton;
   }
 
-  
-  toHome(){
-    document.getElementById('home')?.scrollIntoView({behavior:"smooth"});
+
+  toHome() {
+    document.getElementById('home')?.scrollIntoView({ behavior: "smooth" });
   }
-  toAbout(){
-    document.getElementById('about')?.scrollIntoView({behavior:"smooth"});
+  toAbout() {
+    document.getElementById('about')?.scrollIntoView({ behavior: "smooth" });
   }
 
-  toKnowledge(){
-    document.getElementById('knowledge')?.scrollIntoView({behavior:"smooth"});
+  toKnowledge() {
+    document.getElementById('knowledge')?.scrollIntoView({ behavior: "smooth" });
   }
 
-  toProjects(){
-    document.getElementById('projects')?.scrollIntoView({behavior:"smooth"});
+  toProjects() {
+    document.getElementById('projects')?.scrollIntoView({ behavior: "smooth" });
   }
 
 }

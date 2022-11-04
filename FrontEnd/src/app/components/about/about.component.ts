@@ -9,9 +9,9 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  abouts: About[]=[];
-  constructor(private aboutS:AboutService, private tokenService:TokenService) { }
-  isLogged= false;
+  abouts: About[] = [];
+  constructor(private aboutS: AboutService, private tokenService: TokenService) { }
+  isLogged = false;
   ngOnInit(): void {
     this.cargarAbout();
     if (this.tokenService.getToken()) {
@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
     }
   }
 
-  cargarAbout(){
+  cargarAbout() {
     this.aboutS.lista().subscribe(
       data => {
         this.abouts = data

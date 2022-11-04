@@ -14,7 +14,7 @@
                 <span class="label-text">Subtitulo</span>
                 <span class="nav-dot"></span>
             </label>
-            <input id="input-3" type="file" name="imagen" [(ngModel)]="abouts.img" 
+            <input id="input-3" type="file" name="imagen" [(ngModel)]="abouts.img" (change)="uploadImage($event)"
                 accept=".jpg,.jpeg,.png" required />
             <label for="input-3">
                 <span class="label-text">Imagen</span>

@@ -1,31 +1,34 @@
 div {
     display: flex;
+
     .link {
-      text-decoration: none;
-      color: #27ae60;
-      margin: 10px;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #191d2b;
-      border-radius: 10px;
-      position: relative;
-      transition: 0.4s;
+        text-decoration: none;
+        color: #27ae60;
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191d2b;
+        border-radius: 10px;
+        position: relative;
+        transition: 0.4s;
     }
-    .fa-user-pen, .fa-right-from-bracket{
+
+    .fa-user-pen,
+    .fa-right-from-bracket {
         cursor: pointer;
     }
 
-      
+
     //here is the hover effect
-    
+
     .link:hover {
         transform: rotate(45deg);
     }
-          
-      
+
+
     .link::before {
         content: " ";
         position: absolute;
@@ -36,89 +39,88 @@ div {
         border-radius: 10px;
         transition: opasity 0.2s;
     }
-          
-  
+
+
     .link:hover::before {
         opacity: 0.4;
     }
-          
+
     .link:nth-child(1)::before {
         background: #c32aa3;
     }
-                
+
     .link:nth-child(2)::before {
         background: #6e5494;
     }
-                
+
     .link:nth-child(3)::before {
         background: #0a66c2;
-          
+
     }
-                
+
     .link:nth-child(4)::before {
         background: #27ae60;
     }
 
-                
+
     .link:hover::before {
         transform: translate(-4px, -4px);
         filter: blur(10px);
     }
-                
+
     .link i {
         font-size: 1.7em;
         transition: all 0.4s;
     }
-  
+
     .link:hover i {
         color: #c8c8c8;
         transform: rotate(-45deg);
     }
-                
+
     .link:hover i.instagram {
         color: #c32aa3;
     }
-                
+
     .link:hover i.fa-user-pen {
         color: gray;
     }
-                
+
     .link:hover i.github {
         color: #000000;
     }
-                
+
     .link:hover i.linkedin {
         color: #0a66ca;
     }
 
-    .link:hover i.fa-right-from-bracket{
+    .link:hover i.fa-right-from-bracket {
         color: gray;
     }
 }
 
-@media screen and (max-width: 600px){
-   div{
-    .link{
-        width: 30px;
-        height: 40px;
-    }
-    .link i{
-        font-size: 1.3em;
-    }
-    div{
+@media screen and (max-width: 600px) {
+    div {
+        .link {
+            width: 30px;
+            height: 40px;
+        }
+
+        .link i {
+            font-size: 1.3em;
+        }
+
+        div {
+            position: absolute;
+            top: 0;
+        }
+
         position: absolute;
-        top :0;
+        top: 40px;
+        right: 0;
+
+
+
     }
-    position: absolute;
-    top: 40px;
-    right: 0;
-
-
-    
-   }
 
 }
-
-              
-
-

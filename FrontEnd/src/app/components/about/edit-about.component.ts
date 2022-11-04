@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { About } from 'src/app/model/about';
 import { AboutService } from 'src/app/service/about.service';
+import { ImageService } from 'src/app/service/image.service';
 
 
 @Component({
@@ -10,8 +11,8 @@ import { AboutService } from 'src/app/service/about.service';
   styleUrls: ['./edit-about.component.scss']
 })
 export class EditAboutComponent implements OnInit {
-  abouts:About= null;
-  constructor(private activedRouter:ActivatedRoute, private aboutService: AboutService, private router: Router) { }
+  abouts: About = null;
+  constructor(private activedRouter: ActivatedRoute, private aboutService: AboutService, private router: Router, private imageService: ImageService) { }
 
   ngOnInit(): void {
     const id = this.activedRouter.snapshot.params['id'];
@@ -23,10 +24,12 @@ export class EditAboutComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+    this.imageService.url = "";
   }
 
-  onUpdate():void{
+  onUpdate(): void {
     const id = this.activedRouter.snapshot.params['id'];
+    this.abouts.img = this.imageService.url;
     this.aboutService.update(id, this.abouts).subscribe(
       data => {
         this.router.navigate(['']);
@@ -36,6 +39,15 @@ export class EditAboutComponent implements OnInit {
       }
     )
   }
+
+  uploadImage($event: any) {
+    const id = this.activedRouter.snapshot.params['id'];
+    const nameF = "about_" + id;
+    const nameS = this.abouts.titulo;
+    this.imageService.uploadImage($event, nameF, nameS);
+  }
+
+
 
 
 }

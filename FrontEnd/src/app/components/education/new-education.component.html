@@ -1,6 +1,7 @@
 <body>
     <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <input id="input-1" type="text" placeholder="Titulo adquirido" name="tituloE" [(ngModel)]="tituloE" required autofocus />
+        <input id="input-1" type="text" placeholder="Titulo adquirido" name="tituloE" [(ngModel)]="tituloE" required
+            autofocus />
         <label for="input-1">
             <span class="label-text">Titulo</span>
             <span class="nav-dot"></span>
@@ -11,12 +12,13 @@
             <span class="label-text">Fecha de finalizacion</span>
             <span class="nav-dot"></span>
         </label>
-        <input id="input-3" type="text" placeholder="Descripcion" name="descripcionE" [(ngModel)]="descripcionE" required />
+        <input id="input-3" type="text" placeholder="Descripcion" name="descripcionE" [(ngModel)]="descripcionE"
+            required />
         <label for="input-3">
             <span class="label-text">Descripcion</span>
             <span class="nav-dot"></span>
         </label>
-        <input id="input-4" type="file"  name="imgE" [(ngModel)]="imgE"(change)="uploadImage($event)" accept = ".jpg,.jpeg,.png" required />
+        <input id="input-4" type="text" placeholder="URL de la imagen" name="imgE" [(ngModel)]="imgE" required />
         <label for="input-4">
             <span class="label-text">Imagen</span>
             <span class="nav-dot"></span>
@@ -27,8 +29,6 @@
             <span class="nav-dot"></span>
         </label>
 
-
-        
         <button type="submit">Agregar titulo</button>
         <p class="tip">Presione Tab</p>
         <div class="signup-button">Nuevo titulo</div>

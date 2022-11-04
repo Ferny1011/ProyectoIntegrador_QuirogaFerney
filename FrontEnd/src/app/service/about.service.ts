@@ -11,22 +11,22 @@ export class AboutService {
   URL = environment.URL + 'about/';
   constructor(private httpClient: HttpClient) { }
 
-  public lista():Observable<About[]>{
+  public lista(): Observable<About[]> {
     return this.httpClient.get<About[]>(this.URL + 'lista');
   }
 
-  public details(id:number):Observable<About>{
+  public details(id: number): Observable<About> {
     return this.httpClient.get<About>(this.URL + `detail/${id}`);
   }
 
-  public save(about:About):Observable<any>{
+  public save(about: About): Observable<any> {
     return this.httpClient.post<any>(this.URL + 'create', about);
   }
 
-  public update(id:number, about:About):Observable<any>{
+  public update(id: number, about: About): Observable<any> {
     return this.httpClient.put<any>(this.URL + `update/${id}`, about);
   }
-  public delete(id:number):Observable<any>{
+  public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
 }

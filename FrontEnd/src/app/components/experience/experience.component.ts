@@ -10,7 +10,6 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ExperienceComponent implements OnInit {
   direction: string = 'direction-l';
-  edit: string = 'r';
   expe: Experience[] = [];
   constructor(private experiencie: ExperienceService, private tokenService: TokenService) { }
   isLogged = false;
@@ -35,15 +34,6 @@ export class ExperienceComponent implements OnInit {
       this.direction = 'direction-r';
     }
     return this.direction;
-  }
-
-  changeEdit(): string {
-    if (this.edit === 'r') {
-      this.edit = 'l';
-    } else {
-      this.edit = 'r';
-    }
-    return this.edit;
   }
 
   delete(id?: number) {

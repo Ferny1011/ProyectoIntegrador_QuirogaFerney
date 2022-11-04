@@ -82,7 +82,7 @@
 }
 
 .bar div {
-    
+
     width: 0;
     height: 5px;
     border-radius: 10px;
@@ -141,44 +141,46 @@
         width: var(--num);
     }
 }
-.wrapper{
+
+.wrapper {
     width: 100%;
     margin-top: 0%;
     margin-bottom: 0%;
-   
- }
 
-.add-new{
+}
+
+.add-new {
     position: relative;
     top: 0%;
     left: 8%;
     margin-top: 10px;
     text-align: center;
-  }
-  
-  .admin-button-r{
+}
+
+.admin-button-r {
     text-align: right;
-  }
-  
-  .admin-button-l{
+}
+
+.admin-button-l {
     text-align: left;
-  }
-  
-  .admin{
+}
+
+.admin {
     background: #2a2e35;
     color: white;
     border: 1px solid #2a2e35;
     border-radius: 5px;
     padding: 5px 10px;
     margin: 5px;
-    &:hover{
-      background: white;
-      color: #2a2e35;
+
+    &:hover {
+        background: white;
+        color: #2a2e35;
     }
-  }
-  
-  
-  .new{
+}
+
+
+.new {
     all: unset;
     width: 100px;
     height: 30px;
@@ -197,27 +199,27 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-  }
-  
-  .new::after,
-  .new::before {
+}
+
+.new::after,
+.new::before {
     content: '';
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: -99999;
     transition: all .4s;
-  }
-  
-  .new::before {
+}
+
+.new::before {
     transform: translate(0%, 0%);
     width: 100%;
     height: 100%;
     background: #27ae60;
     border-radius: 10px;
-  }
-  
-  .new::after {
+}
+
+.new::after {
     content: '+';
     color: #191d2b;
     transform: translate(10px, 10px);
@@ -227,37 +229,40 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 50px;
-  }
-  
-  .new:hover::before {
+}
+
+.new:hover::before {
     transform: translate(5%, 20%);
     width: 110%;
     height: 110%;
-  }
-  
-  .new:hover::after {
+}
+
+.new:hover::after {
     border-radius: 10px;
     transform: translate(0, 0);
     width: 100%;
     height: 100%;
-  }
-  
-  .new:active::after {
+}
+
+.new:active::after {
     transition: 0s;
     transform: translate(0, 5%);
-  }
+}
 
 
 
-@media screen and (max-width: 768px) {
-    .hard-skills {
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media screen and (max-width: 320px) {
+    .hard {
+        grid-template-columns: 1fr;
 
-    .details {
-        width: 100%;
-        height: 100%;
-        font-size: 1.5em;
-        font-size: 1.2em;
+        .img {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            justify-self: center;
+        }
+
+        .right {
+            grid-template-columns: 100%;
+        }
     }
 }

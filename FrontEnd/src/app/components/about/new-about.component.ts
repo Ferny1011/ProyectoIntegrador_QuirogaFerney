@@ -13,7 +13,7 @@ export class NewAboutComponent implements OnInit {
   titulo: string;
   subtitulo: string;
   img: string;
-  constructor(private aboutService: AboutService,private router:Router, private activedRouter:ActivatedRoute) { }
+  constructor(private aboutService: AboutService, private router: Router, private activedRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
   }

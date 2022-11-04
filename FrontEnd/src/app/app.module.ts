@@ -28,9 +28,9 @@ import { HardSkillsComponent } from './components/hard-skills/hard-skills.compon
 
 import { NewHardComponent } from './components/hard-skills/new-hard.component';
 import { EditBannerComponent } from './components/banner/edit-banner.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideStorage,getStorage } from '@angular/fire/storage';
+import { provideStorage, getStorage } from '@angular/fire/storage';
 import { EditAboutComponent } from './components/about/edit-about.component';
 import { NewAboutComponent } from './components/about/new-about.component';
 import { NewProjectsComponent } from './components/projects/new-projects.component';
@@ -80,6 +80,6 @@ import { EditHardComponent } from './components/hard-skills/edit-hard.component'
     InterceptorProvider
   ],
   bootstrap: [AppComponent]
-  
+
 })
 export class AppModule { }

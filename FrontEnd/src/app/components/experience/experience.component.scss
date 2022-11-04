@@ -1,32 +1,39 @@
 $link-color: #27ae60;
-.main-title{
+
+.main-title {
   text-align: center;
   padding-bottom: 3.5rem;
-  h2{
-      position: relative;
-      text-transform: uppercase;
-      font-size: 4rem;
-      font-weight: 700;
-      span{
-          color: #27ae60;
-          font-family: 'Kaushan Script', cursive;
-      }
-      .bg-text{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          color: #191d2b;
-          transition: all .4s ease-in-out;
-          z-index: -1;
-          transform: translate(-50%, -50%);
-          font-weight: 800;
-          font-size: 6.3rem;
-      }
+
+  h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+
+    span {
+      color: #27ae60;
+      font-family: 'Kaushan Script', cursive;
+    }
+
+    .bg-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: #191d2b;
+      transition: all .4s ease-in-out;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      font-weight: 800;
+      font-size: 6.3rem;
+    }
   }
-  @media(max-width: 860px) {
-    h2{
-      .bg-text{
-        font-size: 4.5rem;
+
+  @media(max-width: 320px) {
+    h2 {
+      font-size: 2.5rem;
+
+      .bg-text {
+        font-size: 3rem;
       }
     }
   }
@@ -39,10 +46,12 @@ $link-color: #27ae60;
   margin: 0px auto;
   padding: 20px;
   list-style-type: none;
+
   @media(max-width: 860px) {
     width: 100%;
     padding: 4em 0 1em 0;
   }
+
   &:before {
     position: absolute;
     left: 50%;
@@ -55,11 +64,14 @@ $link-color: #27ae60;
     background: #27ae60;
     z-index: 5;
   }
+
   li {
     padding: 1em 0;
+
     @media(max-width: 860px) {
       padding: 2em 0;
     }
+
     &::after {
       content: "";
       display: block;
@@ -70,7 +82,7 @@ $link-color: #27ae60;
   }
 }
 
-p{
+p {
   color: transparent;
   word-break: break-word;
 }
@@ -80,13 +92,16 @@ p{
   width: 400px;
   float: left;
   text-align: right;
+
   @media(max-width: 860px) {
     float: none;
     width: 100%;
     text-align: center;
   }
+
   .flag {
-    box-shadow: -1px 1px 1px rgba(0,0,0,0.15);
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+
     &:after {
       content: "";
       position: absolute;
@@ -96,9 +111,10 @@ p{
       width: 0;
       margin-top: -8px;
       border: solid transparent;
-      border-left-color: rgb(248,248,248);
+      border-left-color: rgb(248, 248, 248);
       border-width: 8px;
       pointer-events: none;
+
       @media(max-width: 860px) {
         content: "";
         position: absolute;
@@ -108,43 +124,50 @@ p{
         width: 0;
         margin-left: -8px;
         border: solid transparent;
-        border-bottom-color: rgb(255,255,255);
+        border-bottom-color: rgb(255, 255, 255);
         border-width: 8px;
         pointer-events: none;
       }
     }
 
-    
+
   }
+
   .time-wrapper {
     float: left;
+
     @media(max-width: 860px) {
       float: none;
     }
   }
 
-  .radio:checked{
-    & + .flag-wrapper{
+  .radio:checked {
+    &+.flag-wrapper {
       transform: translateX(-42px);
-      label{
+
+      label {
         cursor: auto;
-        .flag:before{
+
+        .flag:before {
           display: none;
         }
       }
+
       @media(max-width: 860px) {
-      transform: none;
+        transform: none;
       }
     }
 
-    & ~ .desc{
+    &~.desc {
       border-color: #eee9dc;
       transform: translateX(-42px);
       transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear;
-      p{
+
+      p {
         transition: color 0.3s linear 0.3s;
         color: white;
       }
+
       @media(max-width: 860px) {
         border-color: $link-color;
         transform: none;
@@ -159,13 +182,16 @@ p{
   position: relative;
   width: 400px;
   float: right;
+
   @media(max-width: 860px) {
     float: none;
     width: 100%;
     text-align: center;
   }
+
   .flag {
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+
     &:after {
       content: "";
       position: absolute;
@@ -175,9 +201,10 @@ p{
       width: 0;
       margin-top: -8px;
       border: solid transparent;
-      border-right-color: rgb(248,248,248);
+      border-right-color: rgb(248, 248, 248);
       border-width: 8px;
       pointer-events: none;
+
       @media(max-width: 860px) {
         content: "";
         position: absolute;
@@ -187,44 +214,52 @@ p{
         width: 0;
         margin-left: -8px;
         border: solid transparent;
-        border-bottom-color: rgb(255,255,255);
+        border-bottom-color: rgb(255, 255, 255);
         border-width: 8px;
         pointer-events: none;
       }
     }
+
     &:before {
       left: -15px;
     }
   }
+
   .time-wrapper {
     float: right;
+
     @media(max-width: 860px) {
       float: none;
     }
   }
 
-  .radio:checked{
-    & + .flag-wrapper{
+  .radio:checked {
+    &+.flag-wrapper {
       transform: translateX(42px);
-      label{
+
+      label {
         cursor: auto;
-        .flag:before{
+
+        .flag:before {
           display: none;
         }
       }
+
       @media(max-width: 860px) {
         transform: none;
-        }
+      }
     }
 
-    & ~ .desc{
+    &~.desc {
       border-color: #eee9dc;
       transform: translateX(42px);
       transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear;
-      p{
+
+      p {
         transition: color 0.3s linear 0.3s;
         color: white;
       }
+
       @media(max-width: 860px) {
         border-color: $link-color;
         transform: none;
@@ -237,9 +272,11 @@ p{
   position: relative;
   display: inline-block;
   text-align: center;
+
   @media(max-width: 860px) {
     text-align: center;
   }
+
   .flag {
     position: relative;
     display: inline;
@@ -248,6 +285,7 @@ p{
     border-radius: 5px;
     font-weight: 600;
     text-align: left;
+
     @media(max-width: 860px) {
       background: $link-color;
       z-index: 15;
@@ -256,7 +294,7 @@ p{
 }
 
 .direction-l .flag:before,
-.direction-r .flag:before{
+.direction-r .flag:before {
   position: absolute;
   top: 60%;
   right: -15px;
@@ -269,6 +307,7 @@ p{
   border-radius: 10px;
   border: 4px solid $link-color;
   z-index: 10;
+
   @media(max-width: 860px) {
     position: absolute;
     top: -30px;
@@ -288,23 +327,25 @@ p{
   font-size: 0.66666em;
   color: $link-color;
   vertical-align: middle;
+
   @media(max-width: 860px) {
     display: block;
     position: relative;
     margin: 4px 0 0 0;
     z-index: 14;
   }
+
   .time {
     display: inline-block;
     padding: 4px 6px;
-    background: rgb(248,248,248);
+    background: rgb(248, 248, 248);
   }
 }
 
 .desc {
   margin: 1em 0.75em 0 0;
   font-size: 0.9em;
-  font-family: 'Martel',serif;
+  font-family: 'Martel', serif;
   font-style: italic;
   line-height: 1.5em;
   border-color: transparent;
@@ -316,61 +357,62 @@ p{
   a {
     color: $link-color;
     text-decoration: none;
+
     &:hover {
       text-decoration: underline;
     }
   }
+
   @media(max-width: 860px) {
     position: relative;
     margin: 1em 1em 0 1em;
     padding: 1em;
     background: #2a2e35;
-    box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
     z-index: 15;
-    
+
   }
 }
 
-.radio{
+.radio {
   position: absolute;
   display: none;
 }
 
-label{
+label {
   cursor: pointer;
 }
 
 
-.add-new{
-  position: absolute;
-  top: 25%;
-  left: 10%;
+.add-new {
+  position: relative;
   text-align: center;
 }
 
-.admin-button-r{
+.admin-button-r {
   text-align: right;
 }
 
-.admin-button-l{
+.admin-button-l {
   text-align: left;
 }
 
-.admin{
+.admin {
   background: #2a2e35;
   color: white;
   border: 1px solid #2a2e35;
   border-radius: 5px;
   padding: 5px 10px;
   margin: 5px;
-  &:hover{
+
+  &:hover {
     background: white;
     color: #2a2e35;
   }
 }
 
 
-.new{
+.new {
   all: unset;
   width: 100px;
   height: 30px;

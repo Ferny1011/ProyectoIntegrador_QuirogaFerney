@@ -14,6 +14,7 @@ import { NewAboutComponent } from './components/about/new-about.component';
 import { EditAboutComponent } from './components/about/edit-about.component';
 import { NewProjectsComponent } from './components/projects/new-projects.component';
 import { EditProjectsComponent } from './components/projects/edit-projects.component';
+import { EditHardComponent } from './components/hard-skills/edit-hard.component';
 const routes: Routes = [
   {
     path: '',
@@ -28,43 +29,43 @@ const routes: Routes = [
     component: NewExperienceComponent
   },
   {
-    path:'editexp/:id',component: EditExperienceComponent
+    path: 'editexp/:id', component: EditExperienceComponent
   },
   {
-    path: 'nuevaedu',component: NewEducationComponent
+    path: 'nuevaedu', component: NewEducationComponent
   },
   {
-    path: 'editedu/:id',component: EditEducationComponent
+    path: 'editedu/:id', component: EditEducationComponent
   },
   {
     path: 'newskill', component: NewSkillsComponent
   },
   {
-    path: 'editskills/:id',component: EditSkillsComponent
+    path: 'editskills/:id', component: EditSkillsComponent
   },
   {
     path: 'newhard', component: NewHardComponent
   },
   {
-    path: 'edithard/:id',component: EditSkillsComponent
+    path: 'edithard/:id', component: EditHardComponent
   },
   {
-    path: 'editbanner/:id',component: EditBannerComponent
+    path: 'editbanner/:id', component: EditBannerComponent
   },
   {
-    path:'newabout',component: NewAboutComponent
+    path: 'newabout', component: NewAboutComponent
   },
   {
-    path:'editabout/:id',component: EditAboutComponent
+    path: 'editabout/:id', component: EditAboutComponent
   },
   {
-    path: 'newproject',component: NewProjectsComponent
+    path: 'newproject', component: NewProjectsComponent
   },
   {
-    path: 'editproject/:id',component: EditProjectsComponent
+    path: 'editproject/:id', component: EditProjectsComponent
   },
   {
-    path:'**', pathMatch:'full',
+    path: '**', pathMatch: 'full',
     redirectTo: ''
   }
 ];

@@ -9,9 +9,9 @@ import { HardskillsService } from 'src/app/service/hardskills.service';
   styleUrls: ['./edit-hard.component.scss']
 })
 export class EditHardComponent implements OnInit {
-  hard: HardSkills=null;
+  hard: HardSkills = null;
 
-  constructor(private hardS: HardskillsService,private activatedRouter:ActivatedRoute, private router:Router) { }
+  constructor(private hardS: HardskillsService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -19,7 +19,7 @@ export class EditHardComponent implements OnInit {
       data => {
         this.hard = data;
       }, err => {
-        alert('No se ha podido cargar la skill');
+        alert('se ha podido actualizar la skill');
         this.router.navigate(['']);
       }
     )

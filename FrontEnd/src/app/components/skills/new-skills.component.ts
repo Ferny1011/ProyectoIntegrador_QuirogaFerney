@@ -9,20 +9,20 @@ import { SkillsService } from 'src/app/service/skills.service';
   styleUrls: ['./new-skills.component.scss']
 })
 export class NewSkillsComponent implements OnInit {
-  nombre:string;
-  porcentaje:number;
-  constructor(private skillS:SkillsService, private router: Router) { }
+  nombre: string;
+  porcentaje: number;
+  constructor(private skillS: SkillsService, private router: Router) { }
 
   ngOnInit(): void {
   }
-  
-  onCreate():void{
+
+  onCreate(): void {
     const skill = new Skills(this.nombre, this.porcentaje);
     this.skillS.save(skill).subscribe(
       data => {
         alert('Se ha creado la skill correctamente');
         this.router.navigate(['']);
-      },err => {
+      }, err => {
         alert('Ha ocurrido un error al añadir la skill');
         this.router.navigate(['']);
       }

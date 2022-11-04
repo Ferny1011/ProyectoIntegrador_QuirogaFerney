@@ -11,7 +11,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class EditBannerComponent implements OnInit {
   persona: persona = null;
-  constructor(private activedRouter: ActivatedRoute, private personaService: PersonaService, private router: Router, public imageService:ImageService) { }
+  constructor(private activedRouter: ActivatedRoute, private personaService: PersonaService, private router: Router, public imageService: ImageService) { }
 
   ngOnInit(): void {
     const id = this.activedRouter.snapshot.params['id'];
@@ -27,7 +27,7 @@ export class EditBannerComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activedRouter.snapshot.params['id'];
-    this.persona.img= this.imageService.url;
+    this.persona.img = this.imageService.url;
     this.personaService.update(id, this.persona).subscribe(
       data => {
         this.router.navigate(['']);
@@ -39,7 +39,8 @@ export class EditBannerComponent implements OnInit {
   }
   uploadImage($event: any) {
     const id = this.activedRouter.snapshot.params['id'];
-    const name ="perfil_"+id;
-    this.imageService.uploadImage($event,name);
+    const nameF = "perfil_" + id;
+    const nameS = this.persona.nombre;
+    this.imageService.uploadImage($event, nameF, nameS);
   }
 }

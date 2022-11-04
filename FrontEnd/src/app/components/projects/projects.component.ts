@@ -9,8 +9,8 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  projectos: Projects[] =[];
-  constructor(private projectService: ProjectsService,private tokenService: TokenService) { }
+  projectos: Projects[] = [];
+  constructor(private projectService: ProjectsService, private tokenService: TokenService) { }
   isLogged = false;
   ngOnInit(): void {
     this.cargarProjectos();
@@ -28,12 +28,12 @@ export class ProjectsComponent implements OnInit {
     )
   }
 
-  delete(id:number){
-    if(id != undefined){
+  delete(id: number) {
+    if (id != undefined) {
       this.projectService.delete(id).subscribe(
         data => {
           this.cargarProjectos();
-        },err => {
+        }, err => {
           alert("No se pudo eliminar el projecto");
         }
       )

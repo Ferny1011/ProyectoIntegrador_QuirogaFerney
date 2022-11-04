@@ -19,7 +19,7 @@
                 <span class="label-text">Descripcion</span>
                 <span class="nav-dot"></span>
             </label>
-            <input id="input-4" type="file" name="imgE" [(ngModel)]="education.imgE" 
+            <input id="input-4" type="file" name="imgE" [(ngModel)]="education.imgE" (change)="uploadImage($event)"
                 accept=".jpg,.jpeg,.png" required />
             <label for="input-4">
                 <span class="label-text">Imagen</span>

@@ -1,59 +1,67 @@
 /*banner-content*/
-.banner-content{
+.banner-content {
     margin-top: 22px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 100%;
-    .left-banner{
+
+    .left-banner {
         display: flex;
         align-items: center;
         position: relative;
-        .banner-shape{
+
+        .banner-shape {
             transition: all .4s ease-in-out;
             width: 65%;
             height: 100%;
             background-color: #27ae60;
-            position:absolute;
+            position: absolute;
             left: 0;
             top: -22px;
             z-index: -1;
             clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
         }
-        .image{
+
+        .image {
             border-radius: 14px;
             height: 90%;
             width: 68%;
             margin-left: 4rem;
             background-color: #000;
             transition: all .4s ease-in-out;
-            img{
+
+            img {
                 margin-left: 4rem;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 transition: all .4s ease-in-out;
                 filter: grayscale(100%);
-                &:hover{
+
+                &:hover {
                     filter: grayscale(0);
-                    
+
                 }
             }
         }
     }
 
-    .right-banner{
+    .right-banner {
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding-right: 9rem;
-        .name{
+
+        .name {
             font-size: 3rem;
-            span{
+
+            span {
                 font-family: 'Kaushan Script', cursive;
                 color: #27ae60;
             }
         }
-        p{
+
+        p {
             font-family: 'Martel', serif;
             margin: 1.5rem 0;
             line-height: 2rem;
@@ -62,19 +70,19 @@
 }
 
 /*independed components*/
-.btn-content{
+.btn-content {
     display: flex;
     align-self: flex-start;
 }
 
-a{
+a {
     display: inline-block;
     text-decoration: none;
     color: inherit;
     font-family: inherit;
 }
 
-.main-btn{
+.main-btn {
     border-radius: 30px;
     color: inherit;
     font-weight: 600;
@@ -85,11 +93,13 @@ a{
     display: flex;
     align-items: center;
     overflow: hidden;
-    .btn-text{
+
+    .btn-text {
         padding: 0 2rem;
         font-family: 'Kaushan Script', cursive;
     }
-    .btn-icon{
+
+    .btn-icon {
         background-color: #191d2b;
         display: flex;
         align-items: center;
@@ -98,18 +108,21 @@ a{
         padding: 1rem;
 
     }
-    &::before{
+
+    &::before {
         content: '';
-        position:absolute;
-        top:0;
-        right:0;
+        position: absolute;
+        top: 0;
+        right: 0;
         transform: translateX(-100%);
         transition: all .4s ease-out;
         z-index: -1;
     }
-    &:hover{
+
+    &:hover {
         transition: all .4s ease-out;
-        &::before{
+
+        &::before {
             width: 100%;
             height: 100%;
             background-color: #191d2b;
@@ -119,65 +132,71 @@ a{
     }
 }
 
-.admin{
-    
-	background: #2a2e35;
-	color: white;
-	border: 1px solid #2a2e35;
-	border-radius: 5px;
-	padding: 5px 10px;
-	margin: 5px;
-	&:hover{
-	  background: white;
-	  color: #2a2e35;
-	}
-  }
+.admin {
+
+    background: #2a2e35;
+    color: white;
+    border: 1px solid #2a2e35;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+
+    &:hover {
+        background: white;
+        color: #2a2e35;
+    }
+}
 
 /*responsive*/
-@media screen and (max-width: 600px){
-    .banner-content{
+@media screen and (max-width: 600px) {
+    .banner-content {
         grid-template-columns: 1fr;
         padding-bottom: 2rem;
     }
-    .left-banner{
-        .banner-shape{
+
+    .left-banner {
+        .banner-shape {
             display: none;
         }
 
     }
-    .right-banner{
-        padding-right: 0 !important;;
+
+    .right-banner {
+        padding-right: 0 !important;
+        ;
         grid-row: 1;
         width: 80%;
         text-align: center;
-        margin-left:10%;
+        margin-left: 10%;
         margin-bottom: 5%;
- 
-        .name{
+
+        .name {
             font-size: 2.5rem !important;
         }
 
     }
 
-    .banner-content .left-banner .image{
+    .banner-content .left-banner .image {
         margin: 0 auto;
         width: 90%;
     }
 
-    .btn-content{
+    .btn-content {
         margin: 0 auto;
     }
 
-    .main-btn{
+    .main-btn {
         border: 1px solid #27ae60;
-        .btn-icon{
+
+        .btn-icon {
             background-color: #27ae60;
         }
-        &:hover{
-            &::before{
+
+        &:hover {
+            &::before {
                 background-color: #27ae60;
             }
         }
     }
-    
+
 }

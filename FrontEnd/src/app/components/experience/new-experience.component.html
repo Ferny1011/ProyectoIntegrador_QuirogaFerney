@@ -1,6 +1,7 @@
 <body>
     <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <input id="input-1" type="text" placeholder="Nombre de la empresa" name="nombreE" [(ngModel)]="nombreE" required autofocus />
+        <input id="input-1" type="text" placeholder="Nombre de la empresa" name="nombreE" [(ngModel)]="nombreE" required
+            autofocus />
         <label for="input-1">
             <span class="label-text">Empresa</span>
             <span class="nav-dot"></span>
@@ -11,7 +12,8 @@
             <span class="label-text">Fecha</span>
             <span class="nav-dot"></span>
         </label>
-        <input id="input-3" type="text" placeholder="Descripcion de la tarea" name="descripcionE" [(ngModel)]="descripcionE" required />
+        <input id="input-3" type="text" placeholder="Descripcion de la tarea" name="descripcionE"
+            [(ngModel)]="descripcionE" required />
         <label for="inpu-3">
             <span class="label-text">Descripcion</span>
             <span class="nav-dot"></span>

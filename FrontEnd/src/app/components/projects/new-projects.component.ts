@@ -10,30 +10,28 @@ import { ProjectsService } from 'src/app/service/projects.service';
   styleUrls: ['./new-projects.component.scss']
 })
 export class NewProjectsComponent implements OnInit {
-  nombre:string;
-  categoria:string;
-  fecha:string;
-  img:string;
-  url:string;
+  nombre: string;
+  categoria: string;
+  fecha: string;
+  img: string;
+  url: string;
 
-  constructor(private projectService:ProjectsService, private router:Router, private activatedRoute:ActivatedRoute) { }
+  constructor(private projectService: ProjectsService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
-  onCreate():void{
+  onCreate(): void {
     const projecto = new Projects(this.nombre, this.categoria, this.fecha, this.img, this.url);
     this.projectService.save(projecto).subscribe(
       data => {
         alert('Se ha creado el projecto correctamente');
         this.router.navigate(['']);
-      },err => {
+      }, err => {
         alert('Ha ocurrido un error al añadir el projecto');
         this.router.navigate(['']);
       }
-    );
+    )
   }
-
-
 
 }

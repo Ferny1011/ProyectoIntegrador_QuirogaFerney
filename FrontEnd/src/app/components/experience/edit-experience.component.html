@@ -1,7 +1,8 @@
 <body>
     <div class="container" *ngIf="expLab">
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-            <input id="input-1" type="text" placeholder="Nombre de la empresa" name="nombreE" [(ngModel)]="expLab.nombreE" required autofocus />
+            <input id="input-1" type="text" placeholder="Nombre de la empresa" name="nombreE"
+                [(ngModel)]="expLab.nombreE" required autofocus />
             <label for="input-1">
                 <span class="label-text">Empresa</span>
                 <span class="nav-dot"></span>

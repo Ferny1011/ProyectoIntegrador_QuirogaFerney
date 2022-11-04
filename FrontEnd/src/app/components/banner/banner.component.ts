@@ -11,8 +11,8 @@ import { TokenService } from 'src/app/service/token.service';
 export class BannerComponent implements OnInit {
   persona: persona = null;
 
-  constructor(public personaService: PersonaService,private tokenService:TokenService) { }
-  isLogged= false;
+  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
+  isLogged = false;
 
   ngOnInit(): void {
     this.cargarPersona();
@@ -24,7 +24,7 @@ export class BannerComponent implements OnInit {
 
   }
 
-  cargarPersona(){
+  cargarPersona() {
     this.personaService.details(1).subscribe(
       data => {
         this.persona = data
