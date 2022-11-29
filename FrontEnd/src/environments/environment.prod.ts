@@ -9,5 +9,5 @@ export const environment = {
     messagingSenderId: '248856601432',
   },
   production: true,
-  URL: 'https://backendferq.herokuapp.com/'
+  URL: 'https://backendferq-ferney1011.koyeb.app/'
 };
